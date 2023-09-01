@@ -5,12 +5,15 @@ import { EvilIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';  
+import { Foundation } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MainConSocketContext } from "../App";
+import Hyperlink from 'react-native-hyperlink'
 import { authx } from "../db/firebase";
 import JWT from 'expo-jwt';
 import ip from "../constants";
 import { useSelector } from "react-redux";
+import WebView from "react-native-webview";
 
 const {width, height} = Dimensions.get("window")
 
@@ -32,6 +35,8 @@ export default function SaySomethingComp(x){
     const [deletePost, setDeletePost] = useState(null)
     const [disableButtonPress, setdisableButtonPress] = useState(false)
     const [deletionState,setDeletionState] = useState("deleted")
+    const [urlModalVis, setUrlModalVis] = useState(false)
+    const [hyperUrl, setHyperUrl] = useState("")
 
     const [commentToDeleteID, setCommentToDeleteID] = useState(null)
     const usersData = useSelector(state => state.usersData)
@@ -122,7 +127,12 @@ export default function SaySomethingComp(x){
                                 }
                             </View>
                             <View style={{marginHorizontal: width/39, marginVertical:height/100, left:18, top:5, marginRight:width/13, marginBottom:20}} >
-                                <Text style={{color:"black", fontWeight:"bold"}}>{x.data.postType == "share" ?  x.data.sharedPostData.text : x.data.text }</Text>
+                                <Hyperlink linkStyle={ { color: '#2980b9'} } onPress={(url)=>{
+                                    setHyperUrl(url)
+                                    setUrlModalVis(true)
+                                }}>
+                                    <Text style={{color:"black", fontWeight:"bold"}}>{x.data.postType == "share" ?  x.data.sharedPostData.text : x.data.text }</Text>
+                                </Hyperlink>
                             </View>
                             <View style={{flexDirection:"row"}}>
                                 {
@@ -398,6 +408,37 @@ export default function SaySomethingComp(x){
                                 </TouchableOpacity>
                             </View>
                     </View>
+                </Modal>
+
+                <Modal visible={urlModalVis} animationType="slide" onRequestClose={()=>{setUrlModalVis(false)}} >
+                    <View style={{flexDirection:"row"}}>
+                        <TouchableOpacity style={{height:50, width:50, backgroundColor:"white", marginLeft:10, marginTop:15, borderRadius:30, borderBottomColor:"grey", borderWidth:1, justifyContent:"center", alignItems:"center", marginBottom:10}} onPress={()=>{setUrlModalVis(false)}}>
+                            <Ionicons name="arrow-back" size={24} color="black" />
+                        </TouchableOpacity>
+                        <View style={{marginTop:25, flex:1, alignItems:"flex-end", marginRight:15}}>
+                            <Text style={{fontSize:19}}>RAYE</Text>
+                        </View>
+                    </View>
+                    <WebView  
+                        source={{ uri: hyperUrl }}
+                        renderLoading={()=>{
+                                return(
+                                    <View style={{flex:1, justifyContent:"center", alignItems:"center"}}>
+                                        <ActivityIndicator size="large" color="black" />
+                                    </View>
+                                )
+                        }}
+                        renderError={()=>{
+                            return(
+                                <View style={{height:"100%", backgroundColor:"white", justifyContent:"center",alignItems:"center"}} >
+                                    <Foundation name="page-delete" size={35} color="grey" />
+                                    <Text style={{color:"grey", fontSize:17, marginVertical:15, fontWeight:"bold"}}>Unable to load at the moment</Text>
+                                    <Text style={{color:"grey", fontSize:11.5}}>Try Checking your Network Connection</Text>
+                                </View>
+                            )
+                        }}
+                        startInLoadingState
+                    />
                 </Modal>
                 
             </View>
