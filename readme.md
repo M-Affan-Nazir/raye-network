@@ -10,6 +10,8 @@
     <img src="./img/5.png" style="width: 200px;" alt="Image 5">
 </div>
 
+
+-----------------------------------------------------------------
 ### Pictures of 2nd Update:
 
 Featues:
