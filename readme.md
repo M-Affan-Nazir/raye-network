@@ -2,11 +2,11 @@
 - Global News Updates
 - Discussion Groups
 
-![1](./img/1.png) ![2](./img/2.png)
-
-![3](./img/3.png) ![4](./img/4.png)
-
-![5](./img/5.png)
+img src="./img/1.png" style="width: 200px;" alt="Image 1">
+<img src="./img/2.png" style="width: 200px;" alt="Image 2">
+<img src="./img/3.png" style="width: 200px;" alt="Image 3">
+<img src="./img/4.png" style="width: 200px;" alt="Image 4">
+<img src="./img/5.png" style="width: 200px;" alt="Image 5">
 
 
 ### Pictures of 2nd Update:
@@ -18,11 +18,11 @@ Featues:
 - Announcement Posts
 - Follower Functionality
 
-![6](./img/6.png) ![7](./img/7.png)
-
-![8](./img/8.png) ![9](./img/9.png)
-
-![10](./img/10.png) ![11](./img/11.png)
-
-![12](./img/12.png)
+<img src="./img/6.png" style="width: 200px;" alt="Image 6">
+<img src="./img/7.png" style="width: 200px;" alt="Image 7">
+<img src="./img/8.png" style="width: 200px;" alt="Image 8">
+<img src="./img/9.png" style="width: 200px;" alt="Image 9">
+<img src="./img/10.png" style="width: 200px;" alt="Image 10">
+<img src="./img/11.png" style="width: 200px;" alt="Image 11">
+<img src="./img/12.png" style="width: 200px;" alt="Image 12">
 
