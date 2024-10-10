@@ -9,7 +9,7 @@
 ![5](./img/5.png)
 
 
-### Pictures 2nd Update:
+### Pictures of 2nd Update:
 
 Featues:
 - Main Feed-Page
