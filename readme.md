@@ -1,4 +1,4 @@
-# Global Debates Social Media Platform
+# RAYE: A Global Debates Social Media Platform
 A full-stack global debates social media platform built with React Native (front-end) and Node.js, Express.js, MongoDB, and Socket.io (back-end).
 
 ### Pictures of MVP:
