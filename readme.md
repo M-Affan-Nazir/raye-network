@@ -2,12 +2,11 @@
 - Global News Updates
 - Discussion Groups
 
-<img src="./img/1.png" style="width: 200px;" alt="Image 1">
-<img src="./img/2.png" style="width: 200px;" alt="Image 2">
-<img src="./img/3.png" style="width: 200px;" alt="Image 3">
-<img src="./img/4.png" style="width: 200px;" alt="Image 4">
-<img src="./img/5.png" style="width: 200px;" alt="Image 5">
-
+<img src="./img/1.png" style="width: 200px; display: inline-block;" alt="Image 1">
+<img src="./img/2.png" style="width: 200px; display: inline-block;" alt="Image 2">
+<img src="./img/3.png" style="width: 200px; display: inline-block;" alt="Image 3">
+<img src="./img/4.png" style="width: 200px; display: inline-block;" alt="Image 4">
+<img src="./img/5.png" style="width: 200px; display: inline-block;" alt="Image 5">
 
 ### Pictures of 2nd Update:
 
