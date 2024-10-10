@@ -19,11 +19,13 @@ Featues:
 - Announcement Posts
 - Follower Functionality
 
-<img src="./img/6.png" style="width: 200px;" alt="Image 6">
-<img src="./img/7.png" style="width: 200px;" alt="Image 7">
-<img src="./img/8.png" style="width: 200px;" alt="Image 8">
-<img src="./img/9.png" style="width: 200px;" alt="Image 9">
-<img src="./img/10.png" style="width: 200px;" alt="Image 10">
-<img src="./img/11.png" style="width: 200px;" alt="Image 11">
-<img src="./img/12.png" style="width: 200px;" alt="Image 12">
+<div style="display: flex; gap: 10px;">
+    <img src="./img/6.png" style="width: 200px;" alt="Image 6">
+    <img src="./img/7.png" style="width: 200px;" alt="Image 7">
+    <img src="./img/8.png" style="width: 200px;" alt="Image 8">
+    <img src="./img/9.png" style="width: 200px;" alt="Image 9">
+    <img src="./img/10.png" style="width: 200px;" alt="Image 10">
+    <img src="./img/11.png" style="width: 200px;" alt="Image 11">
+    <img src="./img/12.png" style="width: 200px;" alt="Image 12">
+</div>
 
